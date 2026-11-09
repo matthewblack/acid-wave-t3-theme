@@ -1,0 +1,38 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="common.css"><style>
+.win{display:grid;grid-template-columns:1fr 1fr;height:900px}
+.ed{background:var(--code);padding:34px 40px;border-right:1px solid var(--border)}
+.tabs{display:flex;gap:6px;margin-bottom:22px}.tab{padding:8px 14px;border-radius:8px;color:var(--muted)}.tab.on{background:var(--raised);color:var(--text);border:1px solid var(--border)}
+pre{font-family:"SF Mono",Menlo,monospace;font-size:15px;line-height:1.7;color:var(--codefg)}
+.ln{color:#4e6652;display:inline-block;width:34px}
+.k{color:#b4ff2e}.s{color:#3de8c4}.c{color:#8ca88e}.n{color:#f2e600}.d{background:#1d3414}.r{background:#2b111d}
+.term{background:#05080a;padding:34px 40px}
+.term .t{color:var(--muted);margin-bottom:16px}
+.term pre{font-size:15px}
+.p{color:#b4ff2e}.ok{color:#b4ff2e}.wn{color:#f2e600}.er{color:#ff4d8d}.inf{color:#3de8c4}
+.cur{display:inline-block;width:9px;height:18px;background:#b4ff2e;vertical-align:-3px}
+.sel{background:#243a26}
+.ttl{position:absolute;right:48px;bottom:40px;font-size:40px;font-weight:900;letter-spacing:-.04em;color:var(--accent)}
+</style></head><body><div class="win">
+<div class="ed"><div class="tabs"><div class="tab on">theme.ts</div><div class="tab">palette.json</div><div class="tab">README.md</div></div>
+<pre><span class="ln">1</span><span class="k">import</span> { defineTheme } <span class="k">from</span> <span class="s">"@t3/theme"</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="c">// acid wave: colorful black + fluorescent lime</span>
+<span class="ln">4</span><span class="k">export const</span> acidWave = defineTheme({
+<span class="ln">5</span>  name: <span class="s">"Acid Wave"</span>,
+<span class="ln">6</span>  appearance: <span class="s">"dark"</span>,
+<span class="d"><span class="ln">7</span>  canvas: <span class="s">"#060907"</span>,</span>
+<span class="d"><span class="ln">8</span>  accent: <span class="s">"#b4ff2e"</span>,</span>
+<span class="r"><span class="ln">9</span>  accent: <span class="s">"#346bf1"</span>,</span>
+<span class="ln">10</span>  overlay: <span class="s">"#162a1c"</span>,
+<span class="ln">11</span>  contrast: <span class="n">16.3</span>,
+<span class="ln">12</span>  roles: <span class="n">61</span>,
+<span class="ln">13</span>})</pre></div>
+<div class="term"><div class="t">terminal — zsh</div>
+<pre><span class="p">➜</span> t3 theme validate acid-wave.json
+<span class="ok">✔</span> 61 roles present
+<span class="ok">✔</span> contrast text/canvas 16.3:1
+<span class="wn">⚠</span> placeholder/input 4.1:1 (ok for hints)
+<span class="inf">ℹ</span> appearance: dark
+<span class="p">➜</span> cp acid-wave.json <span class="sel">~/.t3/userdata/themes/</span>
+<span class="p">➜</span> <span class="cur"></span></pre></div>
+</div><div class="ttl">ACID WAVE</div></body></html>

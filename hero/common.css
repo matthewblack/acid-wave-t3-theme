@@ -1,0 +1,4 @@
+:root{--canvas:#060907;--chrome:#080c09;--surface:#0d150f;--raised:#12201a;--overlay:#162a1c;--text:#e3efe4;--muted:#8ca88e;--border:#203324;--accent:#b4ff2e;--accentfg:#0a0f05;--accentsurf:#1d3414;--accentsurffg:#dcff8f;--warn:#f2e600;--err:#ff4d8d;--upd:#3de8c4;--sidebar:#030503;--code:#0a1210;--codefg:#dbe9d6;--sel:#243a26}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1600px;height:900px;background:var(--canvas);color:var(--text);font-family:-apple-system,"SF Pro Text",Inter,system-ui,sans-serif;font-size:15px;overflow:hidden}
+.mono{font-family:"SF Mono",Menlo,ui-monospace,monospace}
